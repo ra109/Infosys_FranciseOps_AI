@@ -24,3 +24,7 @@ This milestone contains the implementation and documentation for Milestone 1.
 ## Screenshots
 <img width="912" height="478" alt="image" src="https://github.com/user-attachments/assets/294d6a3b-4cc4-4117-bd20-e0f09dae2420" />
 <img width="966" height="443" alt="image" src="https://github.com/user-attachments/assets/d1bb2774-18c4-47c2-a489-d4d139750685" />
+<img width="1267" height="333" alt="image" src="https://github.com/user-attachments/assets/d8f09658-96d8-46b9-9fc3-5adacc86e028" />
+<img width="1397" height="737" alt="image" src="https://github.com/user-attachments/assets/7f0de5d0-7c77-4b12-b147-f3218e3c36e4" />
+
+
