@@ -213,21 +213,12 @@ def train_agent1():
             if "Attrition" not in d.columns:
                 if "Termd" in d.columns:
                     d["Attrition"] = np.where(d["Termd"] == 1, "Yes", "No")
-                    d.drop(columns=["Termd"], inplace=True)  # avoid leaking the label
                 elif "EmploymentStatus" in d.columns:
                     d["Attrition"] = np.where(
                         d["EmploymentStatus"].astype(str).str.contains("Term", case=False, na=False),
                         "Yes", "No",
                     )
-                    d.drop(columns=["EmploymentStatus"], inplace=True)  # avoid leaking the label
         frames = [d for d in frames if "Attrition" in d.columns]
-
-        # Also drop any other obviously leaky columns if present (dates/reasons tied to termination)
-        leak_cols = ["TermReason", "TerminationDate", "DateofTermination", "termreason", "TermDate"]
-        for d in frames:
-            for lc in leak_cols:
-                if lc in d.columns:
-                    d.drop(columns=[lc], inplace=True)
         df = pd.concat(frames, ignore_index=True, sort=False) if frames else synthetic_attrition_df()
 
     df["Attrition"] = LabelEncoder().fit_transform(df["Attrition"].astype(str))  # Yes/No -> 1/0
@@ -468,3 +459,4 @@ def run_all():
 
 if __name__ == "__main__":
     run_all()
+
