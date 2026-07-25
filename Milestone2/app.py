@@ -16,24 +16,25 @@ land.
 import streamlit as st
 import random
 import smtplib
+import os
 from email.mime.text import MIMEText
-from google.colab import userdata  # only works inside Google Colab
 
 import db
 import auth
 import admin_dash
 
 # ---------------- SECRETS ----------------
-JWT_SECRET = userdata.get("JWT_SECRET_KEY")
-ADMIN_EMAIL_ID = userdata.get("ADMIN_EMAIL_ID") or "infosys@ai"
-ADMIN_PASSWORD = userdata.get("ADMIN_PASSWORD") or "admin@123"
-
-try:
-    EMAIL_ID = userdata.get("EMAIL_ID")
-    EMAIL_PASSWORD = userdata.get("EMAIL_PASSWORD")
-except Exception:
-    EMAIL_ID = None
-    EMAIL_PASSWORD = None
+# Read from environment variables, NOT google.colab.userdata directly.
+# userdata.get() only works inside the notebook's own kernel process —
+# this file runs as a separate `streamlit run` subprocess, which has no
+# kernel connection. The launch cell in the notebook fetches secrets via
+# userdata.get() and exports them as os.environ vars BEFORE launching
+# this subprocess, so they arrive here as plain environment variables.
+JWT_SECRET = os.environ.get("JWT_SECRET_KEY")
+ADMIN_EMAIL_ID = os.environ.get("ADMIN_EMAIL_ID") or "infosys@ai"
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD") or "admin@123"
+EMAIL_ID = os.environ.get("EMAIL_ID")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
 SECURITY_QUESTIONS = [
     "What was your childhood nickname?",
