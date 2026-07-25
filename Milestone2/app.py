@@ -283,7 +283,7 @@ def admin_page():
         st.session_state.jwt_token = None
         go_to("login")
         st.rerun()
-    admin_dash.render_admin_dashboard()
+      admin_dash.render_admin_dashboard({"role": payload["role"]})
 
 
 # ---------------- ROUTER ----------------
