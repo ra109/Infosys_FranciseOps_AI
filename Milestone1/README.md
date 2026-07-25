@@ -1,25 +1,32 @@
 # Milestone 1
 
 ## Overview
-This milestone contains the implementation and documentation for Milestone 1.
+A User Authentication Module — a Streamlit web app with Login, Signup, and Forgot Password pages, backed by JWT session handling, deployed publicly from Google Colab via ngrok, with OTP delivery through Gmail.
 
 ## Features Implemented
-- Feature 1
-- Feature 2
-- Feature 3
+Login — username/email + password, issues a JWT on success, generic error on failure (doesn't reveal which field was wrong)
+Signup — username, email, password, confirm password, security question + answer; unique username enforced
+Forgot Password — two recovery routes: security question verification, or email OTP verification; both end in a password reset
+JWT session management — token issued at login, checked before showing the Dashboard, cleared on logout
+User Dashboard — welcome message with logged-in identity + logout
+Admin Dashboard — separate hardcoded admin login, lists all registered users (no passwords shown)
+Validation — mandatory fields, email format rule (2+ letters before @, between @ and dot, after dot), password rule (8+ chars, upper, lower, number, special char)
+
 
 ## Tech Stack
-- Python
-- Google Colab
-- Streamlit
-- Gradio
-- ngrok
+Streamlit (UI/frontend)
+JWT (session/auth tokens)
+ngrok (public URL tunnel for the Colab-hosted app)
+Gmail SMTP + App Password (OTP email delivery)
+Google Colab (runtime + Secrets manager for JWT_SECRET, NGROK_AUTHTOKEN, EMAIL_PASSWORD, EMAIL_ADDRESS)
+
 
 ## How to Run
 1. Open the notebook in Google Colab.
-2. Run all cells.
-3. Add your ngrok Authtoken.
-4. Open the generated public URL.
+2. Set up Colab Secrets (key icon in sidebar): JWT_SECRET, NGROK_AUTHTOKEN, EMAIL_PASSWORD, EMAIL_ADDRESS — toggle notebook access on for each.
+3. Run all cells top to bottom.
+4. The app launches via ngrok, which prints a public URL — open that URL in a browser to use the app.
+5. Before sharing/uploading: clear all outputs, and double-check no secrets are hardcoded anywhere in the notebook.
 
 ## Screenshots
 <img width="912" height="478" alt="image" src="https://github.com/user-attachments/assets/294d6a3b-4cc4-4117-bd20-e0f09dae2420" />
