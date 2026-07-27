@@ -35,6 +35,11 @@ Google Colab (runtime + Secrets manager for JWT_SECRET, NGROK_AUTHTOKEN, EMAIL_P
 <img width="1397" height="737" alt="image" src="https://github.com/user-attachments/assets/7f0de5d0-7c77-4b12-b147-f3218e3c36e4" />
 <img width="1017" height="633" alt="Screenshot 2026-07-27 215433" src="https://github.com/user-attachments/assets/c1ffd45f-89d7-422c-aaac-15727defaa2a" />
 <img width="900" height="833" alt="Screenshot 2026-07-27 220949" src="https://github.com/user-attachments/assets/c1a0fcc2-fecd-43d3-a73c-d9b3c3d4725f" />
+<img width="1913" height="896" alt="Screenshot 2026-07-27 220521" src="https://github.com/user-attachments/assets/14ad8662-cec6-4126-bc6c-ae6b38cec60c" />
+<img width="1908" height="958" alt="Screenshot 2026-07-27 220538" src="https://github.com/user-attachments/assets/84f642c2-30b2-4455-9f7d-fa50be8ac61f" />
+<img width="900" height="833" alt="Screenshot 2026-07-27 220949" src="https://github.com/user-attachments/assets/d9ffd7b3-73d3-4a1c-8f26-29c6d46b8987" />
+
+
 
 
 
