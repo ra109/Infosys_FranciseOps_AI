@@ -119,15 +119,26 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 
 ## 8. Screenshots
 
-- Login / Signup (with password strength badge)
-- Forgot Password (Security Question + OTP routes)
+- Login / Signup (with password strength badge) <img width="727" height="641" alt="Screenshot 2026-07-27 232344" src="https://github.com/user-attachments/assets/53a8a905-9f7c-4bbf-a80d-5d7f65161696" />
+
+- Forgot Password (Security Question + OTP routes)  <img width="642" height="252" alt="image" src="https://github.com/user-attachments/assets/93897c61-e274-4a43-ab59-3f76977d2fec" />
+
 - Home page (KPI overview)
-- AI Copilot (prompt + response)
+- AI Copilot (prompt + response) <img width="1782" height="550" alt="Screenshot 2026-07-27 233838" src="https://github.com/user-attachments/assets/50ded694-56c3-4810-a18d-cfb60acf28f0" />
+
 - Weather Demo (city + result)
 - Outlet Tiers page (4-tier chart)
-- Admin Panel → ML Model Card tab
-- Admin Panel → Add / Delete / Unlock user actions
-- A triggered lockout message
-- An OTP cooldown message
+- Admin Panel → ML Model Card tab <img width="1917" height="916" alt="Screenshot 2026-07-27 233612" src="https://github.com/user-attachments/assets/1a49013a-307f-4c20-a2eb-2dcc00453b32" />
 
-*(Images live in `screenshots/` — reference each one here once captured, e.g. `![Login](screenshots/login.png)`)*
+<img width="1917" height="908" alt="Screenshot 2026-07-27 233554" src="https://github.com/user-attachments/assets/07ccf308-20a9-4953-a730-11e9fad8531b" />
+
+- A triggered lockout message <img width="1917" height="905" alt="Screenshot 2026-07-27 233535" src="https://github.com/user-attachments/assets/569df567-034f-4f37-8c04-500160b9c8d6" />
+
+<img width="1908" height="912" alt="Screenshot 2026-07-27 233511" src="https://github.com/user-attachments/assets/67c7f1cb-37d1-4eb7-b28f-e7628c4608f1" />
+<img width="1917" height="907" alt="Screenshot 2026-07-27 233451" src="https://github.com/user-attachments/assets/e75a6982-0f0e-4bfe-8d49-fa59b2f48a9a" />
+<img width="395" height="546" alt="Screenshot 2026-07-27 233418" src="https://github.com/user-attachments/assets/6afd8666-155e-4074-a1eb-e2b3b7d51cd2" />
+
+<img width="315" height="325" alt="Screenshot 2026-07-27 233246" src="https://github.com/user-attachments/assets/c1cce1b2-30b8-42f6-bbf9-6cbdb4bb6ca4" />
+<img width="1905" height="913" alt="Screenshot 2026-07-27 232911" src="https://github.com/user-attachments/assets/eac3308c-ea0c-43c5-a83a-89056828cbfe" />
+
+
