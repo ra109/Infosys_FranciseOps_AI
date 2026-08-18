@@ -344,10 +344,5 @@ Built as part of the **Infosys Springboard Internship — Batch 1**. Thanks to `
 | `ADMIN_EMAIL_ID` / `ADMIN_PASSWORD` | Seed admin account credentials | Set locally, never commit |
 | `NGROK_AUTHTOKEN` | Tunnel auth for Colab deployment | ngrok.com dashboard |
 
-**Never commit:** real HF/Kaggle tokens, a real Gmail password, any `.env` with real values, or database dumps with real personal data. If a secret is ever accidentally committed, **revoke and rotate it immediately** — deleting the line in a later commit is not enough, it stays in git history.
 
-Add `.env` to `.gitignore` before your first commit, and verify with:
-```bash
-git check-ignore -v .env
-```
 
