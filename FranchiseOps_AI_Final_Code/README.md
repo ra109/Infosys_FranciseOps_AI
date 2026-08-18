@@ -26,7 +26,7 @@
 ## Program & Team Context
 
 - **Program:** Infosys Springboard Internship — Batch 1
-- **Mentor:** `[MOHAMEDSIPLI M and Project Mentor]`
+- **Mentor:** `[FILL IN — mentor's full name and designation]`
 
 | Name | Role / What They Built | GitHub Handle |
 |---|---|---|
@@ -79,15 +79,74 @@
 
 ## Specialised Agents
 
-| # | Agent | Business Function | ML Models Benchmarked | Output |
-|---|---|---|---|---|
-| 1 | Workforce & Retention Intelligence | Predicts which employees are at risk of leaving | `[FILL IN — models tried]` (best model selected after fixing a data-leakage bug: `Termd`/`EmploymentStatus` columns were leaking the target label and were removed) | Risk score, segmentation chart |
-| 2 | Outlet Intelligence & Revenue Analytics | Clusters outlets and simulates revenue scenarios | `[FILL IN — models tried]` | Cluster chart, revenue simulation |
-| 3 | Inventory Intelligence & Demand Forecasting | Forecasts SKU demand, flags stock-out risk | `[FILL IN — models tried]` | Demand forecast chart, alerts |
+All 9 agents are implemented, orchestrated by `intent_router.py`, which classifies each incoming question and routes it to the correct agent.
 
-Each agent reads from the relevant SQLite tables seeded by `seed_data.py` and surfaces its output inline in the Streamlit UI via Plotly.
+```
+                    AI COPILOT / ORCHESTRATION LAYER
+                         (intent_router.py)
+              ▼ routes each query to the right agent ▼
 
-> The full spec calls for 9 agents (adding Marketing ROI, Sentiment, Audit & Compliance, Executive Digest, SOP Translation, and Document RAG Studio). These are documented under [Future Scope](#known-limitations--future-scope) — the RAG/document Q&A capability is already partially covered by the LangChain + ChromaDB layer powering the copilot.
+  1. Workforce &     2. Outlet &        3. Inventory &
+     Retention           Revenue            Demand
+
+  4. Marketing ROI   5. Sentiment &     6. Audit &
+                         Feedback           Compliance
+
+  7. Executive        8. SOP             9. Document
+     Digest              Translation        RAG Studio
+```
+
+### Agent 1 — Workforce & Retention Intelligence
+Predicts which employees are at risk of leaving and segments the workforce by risk tier.
+- **ML models benchmarked:** RandomForest, GradientBoosting, DecisionTree, LogisticRegression, LinearRegression, SVC, MLP
+- **Best model:** `[FILL IN — which one was selected and why, e.g. highest F1/accuracy]`
+- **Note:** an early version leaked the target label through the `Termd` and `EmploymentStatus` columns — these were identified and removed before final training.
+- **Charts:** Bar, Box plot, 3D Scatter, Heatmap
+
+### Agent 2 — Outlet Intelligence & Revenue Analytics
+Tracks outlet health, revenue drivers, and benchmarks stores against each other on a live map.
+- **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR
+- **Best model:** `[FILL IN]`
+- **Charts:** Folium map, Bar, Radar
+
+### Agent 3 — Inventory Intelligence & Demand Forecasting
+Forecasts SKU demand and manages stock-out risk with an auto-replenishment engine.
+- **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR, Isolation Forest
+- **Best model:** `[FILL IN]`
+- **Charts:** Treemap, Line, Funnel, Heatmap
+
+### Agent 4 — Marketing ROI Intelligence
+Evaluates campaign ROI and channel effectiveness, including Customer Acquisition Cost analytics.
+- **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR
+- **Best model:** `[FILL IN]`
+- **Charts:** Sunburst, Violin, Bar, Scatter
+
+### Agent 5 — Customer Sentiment & Feedback Analytics
+Real-time and batch sentiment analysis across customer feedback with aspect extraction.
+- **ML models benchmarked:** RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, LogisticRegression, SVC
+- **Best model:** `[FILL IN]`
+- **Charts:** Density heatmap, Bar, Line
+
+### Agent 6 — Audit & Compliance Intelligence
+Predicts audit failure risk, tracks violations, and includes an FSSAI compliance checklist.
+- **ML models benchmarked:** RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, LogisticRegression, SVC, Isolation Forest
+- **Best model:** `[FILL IN]`
+- **Charts:** Sunburst, Box plot, Scatter
+
+### Agent 7 — Executive Franchise Intelligence Digest
+One-page rollup of the whole network's health, generated on demand with an AI executive summary.
+- **Basis:** aggregates outputs of Agents 1–6 (no separate model benchmark)
+- **Charts:** Gauge/Indicator, Pie, Bar
+
+### Agent 8 — Multilingual SOP Translation (NLLB-200)
+Offline translation of any text or SOP document into 20+ languages, plus a franchise business glossary.
+- **Model:** NLLB-200 (distilled-600M) — translation, not a classical ML benchmark
+
+### Agent 9 — PDF SOP & Franchise Agreement RAG Studio
+Upload-your-own-document workbench: SOPs, contracts, and FSSAI guidelines, chunked and indexed for grounded Q&A.
+- **Retrieval:** FAISS + sentence-transformers (no classical ML benchmark)
+
+Each agent reads from the relevant SQLite tables seeded by `seed_data.py` and surfaces its output inline in the Streamlit UI via Plotly (or Folium/FAISS where noted).
 
 ---
 
@@ -126,12 +185,28 @@ All credentials and secrets are configured via environment variables and are nev
 
 ## Installation & Run Instructions
 
+### Repository Structure
+
+```
+Infosys_FranciseOps_AI/
+├── README.md                      ← this file (root README)
+├── FranchiseOps_AI_Final_Code/    ← main application code
+│   ├── app.py
+│   ├── db.py
+│   ├── auth.py
+│   ├── admin_dash.py
+│   └── ...
+├── FranchiseOps_RAG_Builder/      ← RAG index build scripts
+├── Milestone1/                    ← milestone-specific notes
+└── Milestone2/
+```
+
 ### Run locally
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/ra109/Infosys_FranciseOps_AI.git
-cd Infosys_FranciseOps_AI
+cd Infosys_FranciseOps_AI/FranchiseOps_AI_Final_Code
 
 # 2. Create and activate a virtual environment
 python -m venv venv
@@ -214,15 +289,13 @@ Silent screen recording, 2–5 minutes, 720p, recorded with a **dummy account** 
 - Synthetic/seeded data only, not connected to a live franchise's real data
 - Single-tenant — one deployment per franchise network
 - SQLite instead of a production-grade database (e.g. PostgreSQL)
-- Currently 3 of the 9 planned specialised agents are implemented
+- Runs via Colab + ngrok tunnel rather than a persistent production deployment
 
 **Future Scope:**
-- Marketing ROI Intelligence agent (campaign ROI, CAC analytics)
-- Customer Sentiment & Feedback Analytics agent
-- Audit & Compliance Intelligence agent (FSSAI checklist, violation tracking)
-- Executive Franchise Intelligence Digest (network-wide rollup)
-- Multilingual SOP Translation (NLLB-200)
-- Dedicated PDF SOP & Franchise Agreement RAG Studio (upload-your-own-document workbench)
+- Migrate from SQLite to a production database (PostgreSQL) for multi-tenant use
+- Persistent cloud deployment (replace ngrok tunnel with a hosted endpoint)
+- Expand RAG Studio to support multi-document cross-referencing
+- Add automated model retraining pipeline as new outlet data comes in
 
 ---
 
