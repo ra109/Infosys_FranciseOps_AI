@@ -26,7 +26,7 @@
 ## Program & Team Context
 
 - **Program:** Infosys Springboard Internship — Batch 1
-- **Mentor:** `[FILL IN — mentor's full name and designation]`
+- **Mentor:** `[MOHAMEDSIPLI M and Project Mentor]`
 
 | Name | Role / What They Built | GitHub Handle |
 |---|---|---|
