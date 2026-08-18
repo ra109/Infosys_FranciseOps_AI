@@ -107,31 +107,31 @@ Predicts which employees are at risk of leaving and segments the workforce by ri
 ### Agent 2 — Outlet Intelligence & Revenue Analytics
 Tracks outlet health, revenue drivers, and benchmarks stores against each other on a live map.
 - **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR
-- **Best model:** `[FILL IN]`
+- **Best model:** `GradientBoostingRegressor — highest R² among the benchmarked models on outlet revenue prediction, chosen for capturing non-linear relationships between outlet features and revenue.`
 - **Charts:** Folium map, Bar, Radar
 
 ### Agent 3 — Inventory Intelligence & Demand Forecasting
 Forecasts SKU demand and manages stock-out risk with an auto-replenishment engine.
 - **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR, Isolation Forest
-- **Best model:** `[FILL IN]`
+- **Best model:** `RandomForestRegressor — lowest RMSE among the benchmarked models on SKU demand prediction, chosen for its stability across different outlet sizes.`
 - **Charts:** Treemap, Line, Funnel, Heatmap
 
 ### Agent 4 — Marketing ROI Intelligence
 Evaluates campaign ROI and channel effectiveness, including Customer Acquisition Cost analytics.
 - **ML models benchmarked:** RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor, LinearRegression, SVR
-- **Best model:** `[FILL IN]`
+- **Best model:** `GradientBoostingRegressor — highest R² among the benchmarked models on campaign ROI prediction, chosen for handling the non-linear relationship between spend and conversion.`
 - **Charts:** Sunburst, Violin, Bar, Scatter
 
 ### Agent 5 — Customer Sentiment & Feedback Analytics
 Real-time and batch sentiment analysis across customer feedback with aspect extraction.
 - **ML models benchmarked:** RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, LogisticRegression, SVC
-- **Best model:** `[FILL IN]`
+- **Best model:** `RandomForestClassifier — highest F1-score among the benchmarked models on sentiment classification, chosen for balanced precision/recall across sentiment classes.`
 - **Charts:** Density heatmap, Bar, Line
 
 ### Agent 6 — Audit & Compliance Intelligence
 Predicts audit failure risk, tracks violations, and includes an FSSAI compliance checklist.
 - **ML models benchmarked:** RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, LogisticRegression, SVC, Isolation Forest
-- **Best model:** `[FILL IN]`
+- **Best model:** `[GradientBoostingClassifier — highest F1-score among the benchmarked models on audit failure prediction, chosen for its robustness on the imbalanced violation dataset.`
 - **Charts:** Sunburst, Box plot, Scatter
 
 ### Agent 7 — Executive Franchise Intelligence Digest
@@ -194,7 +194,8 @@ All credentials and secrets are configured via environment variables and are nev
 
 ## Screenshots
 
-`[FILL IN — add 3–6 screenshots: login, main dashboard, one agent tab, chat copilot answering a grounded question, admin dashboard]`
+<img width="1919" height="909" alt="Screenshot 2026-08-14 191712" src="https://github.com/user-attachments/assets/cc9470fe-5941-40d8-855d-96742e75170f" /> <img width="1910" height="898" alt="Screenshot 2026-08-14 192239" src="https://github.com/user-attachments/assets/f6e14071-bda9-4e86-becd-50a544dc138e" />
+
 
 ---
 
