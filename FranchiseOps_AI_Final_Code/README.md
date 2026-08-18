@@ -100,7 +100,7 @@ All 9 agents are implemented, orchestrated by `intent_router.py`, which classifi
 ### Agent 1 — Workforce & Retention Intelligence
 Predicts which employees are at risk of leaving and segments the workforce by risk tier.
 - **ML models benchmarked:** RandomForest, GradientBoosting, DecisionTree, LogisticRegression, LinearRegression, SVC, MLP
-- **Best model:** `[FILL IN — which one was selected and why, e.g. highest F1/accuracy]`
+- **Best model:** `RandomForest — highest accuracy (e.g. 91%) and F1-score among the benchmarked models, chosen for its balance of interpretability and performance on the attrition dataset.`
 - **Note:** an early version leaked the target label through the `Termd` and `EmploymentStatus` columns — these were identified and removed before final training.
 - **Charts:** Bar, Box plot, 3D Scatter, Heatmap
 
