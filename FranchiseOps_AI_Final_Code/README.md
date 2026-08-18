@@ -195,6 +195,17 @@ All credentials and secrets are configured via environment variables and are nev
 ## Screenshots
 
 <img width="1919" height="909" alt="Screenshot 2026-08-14 191712" src="https://github.com/user-attachments/assets/cc9470fe-5941-40d8-855d-96742e75170f" /> <img width="1910" height="898" alt="Screenshot 2026-08-14 192239" src="https://github.com/user-attachments/assets/f6e14071-bda9-4e86-becd-50a544dc138e" />
+<img width="1910" height="898" alt="Screenshot 2026-08-14 192239" src="https://github.com/user-attachments/assets/94b90a25-87f7-49f9-8ddc-1854c1f1a6a3" />
+<img width="1902" height="894" alt="Screenshot 2026-08-14 192407" src="https://github.com/user-attachments/assets/8443bb2f-f0d0-4b58-a332-3a589be5788e" />
+<img width="1919" height="913" alt="Screenshot 2026-08-14 192432" src="https://github.com/user-attachments/assets/a6f261a8-4c18-4a9d-8899-b1b9287d12e2" />
+<img width="1914" height="915" alt="Screenshot 2026-08-14 192150" src="https://github.com/user-attachments/assets/d0c22975-51a8-4a3a-9b15-98feed3df93c" />
+<img width="1916" height="891" alt="Screenshot 2026-08-14 192018" src="https://github.com/user-attachments/assets/e66fe3af-b2cc-4888-a645-162f3451e807" />
+<img width="1906" height="698" alt="Screenshot 2026-08-14 191945" src="https://github.com/user-attachments/assets/5c3c9377-852b-493b-86c9-314eb2fb04db" />
+<img width="1919" height="907" alt="Screenshot 2026-08-14 191904" src="https://github.com/user-attachments/assets/06e94501-6b78-435f-a770-cece992f1fcb" />
+<img width="1906" height="924" alt="Screenshot 2026-08-14 191835" src="https://github.com/user-attachments/assets/8562d9d5-c24e-449b-8332-7bec127ba84b" />
+<img width="1915" height="912" alt="Screenshot 2026-08-14 191803" src="https://github.com/user-attachments/assets/97d4c361-8018-4a98-be0b-e4ddae3fdd5f" />
+<img width="1907" height="912" alt="Screenshot 2026-08-14 191738" src="https://github.com/user-attachments/assets/3ab064ff-b282-4c4c-ae0a-a22d02b1b6ba" />
+
 
 
 ---
@@ -246,7 +257,7 @@ streamlit run app.py
 
 The project was primarily developed and run on Google Colab (Tesla T4 GPU).
 
-1. Open the notebook: `[FILL IN — Colab notebook link]`
+1. Open the notebook: `https://colab.research.google.com/drive/116DTgK6h-UPeS54tpCvmMZLNRGOZ2yDW?usp=sharing`
 2. Add the following as Colab **Secrets** (key icon in left sidebar): `JWT_SECRET_KEY`, `ADMIN_EMAIL_ID`, `ADMIN_PASSWORD`, `NGROK_AUTHTOKEN`, `HF_TOKEN`, `EMAIL_ID`, `EMAIL_PASSWORD`, `KAGGLE_USERNAME`, `KAGGLE_KEY`
 3. Run cells in order: install dependencies → export secrets to `os.environ` (required — `google.colab.userdata.get()` cannot be called from inside the `streamlit run` subprocess) → seed database → launch Streamlit via ngrok tunnel.
 
