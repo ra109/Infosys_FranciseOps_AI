@@ -31,8 +31,7 @@
 
 | Name | Role / What They Built | GitHub Handle |
 |---|---|---|
-| Raghuvansh Pandey | Full-stack + ML — auth, DB, ML agents, LLM/RAG layer, admin dashboard | [@ra109](https://github.com/ra109) |
-| `[FILL IN]` | `[FILL IN]` | `[FILL IN]` |
+| Raghuvansh Pandey | Full-stack + ML — auth, DB, ML agents, LLM/RAG layer, admin dashboard | [@ra109](https://github.com/ra109) | 
 
 ---
 
@@ -188,7 +187,6 @@ All credentials and secrets are configured via environment variables and are nev
 - ML model performance ledger (accuracy/F1/R² per agent)
 - Chat history & audit trail across users
 
-`[FILL IN — add admin dashboard screenshot]`
 
 ---
 
@@ -304,7 +302,7 @@ Test in a brand-new empty venv before submitting.
 
 ## Demo Video
 
-`docs/demo/demo.mp4` — `[FILL IN — or Google Drive/YouTube unlisted link if too large for GitHub]`
+`docs/demo/demo.mp4` — `[or Google Drive/YouTube unlisted link if too large for GitHub]`
 
 Silent screen recording, 2–5 minutes, 720p, recorded with a **dummy account** (no real Gmail credentials or real OTP inbox on screen). Shows: login → OTP forgot-password flow → a core agent → the chat copilot → the admin dashboard.
 
@@ -328,7 +326,7 @@ Silent screen recording, 2–5 minutes, 720p, recorded with a **dummy account** 
 
 ## Acknowledgements
 
-Built as part of the **Infosys Springboard Internship — Batch 1**. Thanks to `[FILL IN — mentor name]` for guidance throughout.
+Built as part of the **Infosys Springboard Internship — Batch 1**. Thanks to `Mohamedsipli M` for guidance throughout.
 
 ---
 
